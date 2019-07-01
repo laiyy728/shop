@@ -46,13 +46,13 @@ public class User {
     /**
      * 注册时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+//    private long createDate = System.currentTimeMillis();
     private Date createDate = new Date();
 
     /**
      * 生日
      */
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+//    private long birthday = 0L;
     private Date birthday = null;
 
     /**

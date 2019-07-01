@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!-- 是否开启缓存 -->
+        <setting name="cacheEnabled" value="false"/>
+        <!-- 超时时长 -->
+        <setting name="defaultStatementTimeout" value="5"/>
+        <!-- 是否开启驼峰命名转换 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 是否获取数据库自增主键值-->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!-- 使用列别名代替列明 -->
+        <setting name="useColumnLabel" value="true" />
+    </settings>
+
+    <!-- Continue editing here -->
+
+</configuration>
