@@ -13,8 +13,19 @@
         <setting name="useGeneratedKeys" value="true"/>
         <!-- 使用列别名代替列明 -->
         <setting name="useColumnLabel" value="true" />
+
+        <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
 
     <!-- Continue editing here -->
+    <plugins>
+        <!-- mybatis 分页插件你 -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 指定数据库方言为 mysql，不指定时会自动检测当前数据库连接 -->
+            <property name="helperDialect" value="mysql" />
+            <!-- 分页合理化参数，当 pageNum<0 时，查询第一页，当 pageNum>pages 时，查询最后一页 -->
+            <property name="reasonable" value="true" />
+        </plugin>
+    </plugins>
 
 </configuration>

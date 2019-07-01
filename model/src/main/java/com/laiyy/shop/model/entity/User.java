@@ -2,6 +2,7 @@ package com.laiyy.shop.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.laiyy.shop.common.constants.DateConstant;
 import com.laiyy.shop.common.constants.SexConstant;
 import com.laiyy.shop.model.serializer.SexSerializer;
 import lombok.Data;
@@ -9,6 +10,7 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @author laiyy
@@ -23,7 +25,7 @@ public class User {
     /**
      * 用户 uid
      */
-    private String uid = "";
+    private String uid = UUID.randomUUID().toString().replace("-", "");
 
     /**
      * 用户名（昵称）
@@ -46,13 +48,13 @@ public class User {
     /**
      * 注册时间
      */
-//    private long createDate = System.currentTimeMillis();
+    @JsonFormat(pattern = DateConstant.YMD_HMS_FORMAT, timezone = DateConstant.TIME_ZONE)
     private Date createDate = new Date();
 
     /**
      * 生日
      */
-//    private long birthday = 0L;
+    @JsonFormat(pattern = DateConstant.YMD_CHINESE_FORMAT, timezone = DateConstant.TIME_ZONE)
     private Date birthday = null;
 
     /**
@@ -63,5 +65,6 @@ public class User {
     /**
      * 状态
      */
+    @Pattern(regexp = "0|10|20|30|40|50", message = "用户状态错误")
     private int status;
 }

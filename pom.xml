@@ -13,6 +13,8 @@
       <module>cms</module>
     <module>repository</module>
     <module>service</module>
+      <module>interface</module>
+    <module>rpc</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -58,13 +60,19 @@
         <artifactId>mybatis</artifactId>
         <version>3.5.1</version>
       </dependency>
-
       <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
       <dependency>
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis-spring</artifactId>
         <version>2.0.1</version>
       </dependency>
+      <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+      <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>5.1.10</version>
+      </dependency>
+
 
       <!-- 工具包 -->
       <dependency>
